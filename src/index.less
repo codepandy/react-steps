@@ -1,0 +1,102 @@
+.stepContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  .itemContainer {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  .itemContainer + .itemContainer {
+    margin-left: 16px;
+  }
+  .LastItemContainer {
+    flex: none;
+  }
+  .label {
+    position: relative;
+    display: inline-block;
+  }
+  .label::after {
+    content: "";
+    height: 1px;
+    background-color: rgba(233, 233, 233, 1);
+    width: 2000px;
+    display: inline-block;
+    position: absolute;
+    top: 16px;
+  }
+  .isLast::after {
+    display: none;
+  }
+  .finishStep {
+    display: inline-block;
+    text-align: center;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 16px;
+    background-color: rgba(0, 155, 255, 1);
+    margin-right: 8px;
+    font-size: 16px;
+    font-family: HelveticaNeue;
+    color: rgba(255, 255, 255, 1);
+  }
+  .processStep {
+    .finishStep;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    color: rgba(0, 0, 0, 0.25);
+  }
+  .smallSize {
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 14px;
+  }
+  .smallFinishStep {
+    .finishStep;
+    .smallSize;
+  }
+  .smallProcessStep {
+    .processStep;
+    .smallSize;
+  }
+  .finishTitle {
+    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto, helvetica neue, Arial,
+      noto sans, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol, noto color emoji;
+    color: rgba(0, 0, 0, 0.65);
+    padding-right: 16px;
+  }
+
+  .processTitle {
+    .finishTitle;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.85);
+  }
+
+  .waitTitle {
+    .finishTitle;
+    color: rgba(0, 0, 0, 0.45);
+  }
+  .desc {
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+  .finishDesc {
+    .desc;
+    color: rgba(0, 0, 0, 0.45);
+  }
+  .processDesc {
+    .desc;
+    color: rgba(0, 0, 0, 0.65);
+  }
+  .smallMargin {
+    margin-left: 32px;
+  }
+  .normalMargin {
+    margin-left: 40px;
+  }
+}
